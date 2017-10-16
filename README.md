@@ -171,7 +171,7 @@ When multiple rules focus on the same metric, the autoscaler should take the act
 
 
 
-### Deploying the autoscaler on DCOS
+### Deploying the autoscaler to DCOS
 
 To deploy on DCOS follow the steps:
   1. Open Services tab
