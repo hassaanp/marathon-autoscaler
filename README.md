@@ -18,6 +18,7 @@ The aim of this project is to allow Marathon applications to scale to meet load 
     * [Participation](#participation)
     * [Minimum and Maximum Instances](#minimum-and-maximum-instances)
     * [Scaling Rules](#scaling-rules)
+  * [Deploying the Autoscaler on DCOS](#deploying-the-autoscaler-to-dcos)
 * [Testing the autoscaler with the Stress Tester app](#testing-the-autoscaler-with-the-stress-tester-app)
 
 
@@ -169,6 +170,17 @@ When multiple rules focus on the same metric, the autoscaler should take the act
 \*\* [A Wikipedia Reference on ISO8601 time duration](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 
+
+### Deploying the autoscaler on DCOS
+
+To deploy on DCOS follow the steps:
+  1. Open Services tab
+  2. Click `Run a Service`
+  3. Select `Single Container`
+  4. In the configuration, add the following params:
+     i. *Container Image* == `hassaanp/marathon-autoscaler`
+    ii. In *Environment Variables* add the following:
+    MARATHON_USER, MARATHON_PASS, MARATHON_URI, CPU_FAN_OUT, MESOS_URI, INTERVAL 
 
 ## Testing the autoscaler with the Stress Tester app
 
